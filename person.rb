@@ -20,6 +20,6 @@ class Person
     public :can_use_services?
   end
   
-  person = Person.new(28, 'happen')
+  person = Person.new(28, 'Khomotso')
   p person.can_use_services?
   
