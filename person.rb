@@ -1,4 +1,8 @@
 require './nameable'
+require_relative 'decorator'
+require_relative 'capitalize_decorator'
+require_relative 'trimmer_decorator'
+require_relative 'rental'
 
 class Person < Nameable
   attr_reader :id
@@ -9,7 +13,12 @@ class Person < Nameable
     @name = name
     @age = age
     @parent_permission = parent_permission
+    @rentals = []
     super()
+  end
+
+  def correct_name
+    @name
   end
 
   def of_age?
@@ -22,10 +31,7 @@ class Person < Nameable
   end
   public :can_use_services?
 
-  def correct_name
-    @name
+  def add_rental(book, date)
+    Rental.new(date, book, self)
   end
 end
-
-person = Person.new(28, 'Khomotso')
-p person.can_use_services?
