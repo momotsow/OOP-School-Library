@@ -143,7 +143,6 @@ sh
   cd my-folder
   git clone [git@github.com:myaccount/my-project.git](https://github.com/momotsow/OOP-School-Library.git)
 
-
 ### Install
 
 Install this project with:
