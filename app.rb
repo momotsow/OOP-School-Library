@@ -83,7 +83,7 @@ class App
 
     student = Student.new(age, nil, name, parent_permission: permission)
     @people.push(student)
-    puts 'A student created successfully'
+    puts 'A student is created successfully'
   end
 
   def create_teacher
@@ -96,7 +96,7 @@ class App
 
     teacher = Teacher.new(age, specialization, name)
     @people.push(teacher)
-    puts 'Teacher created successfully'
+    puts 'Teacher is created successfully'
   end
 
   def create_book
@@ -106,7 +106,7 @@ class App
     author = gets.chomp
     book = Book.new(title, author)
     @books.push(book)
-    puts 'Book created successfully'
+    puts 'Book is created successfully'
     run
   end
 
@@ -127,7 +127,7 @@ class App
 
     rental = Rental.new(date, @books[selected_id_book], @people[selected_id_person])
     @rentals.push(rental)
-    puts 'Rental created successfully'
+    puts 'Rental is created successfully'
     run
   end
 
@@ -152,7 +152,7 @@ class App
   end
 
   def list_rentals
-    print 'ID of person; '
+    print 'ID of person: '
     id = gets.chomp.to_i
     rentals = @rentals.select { |rental| id == rental.person.id }
 

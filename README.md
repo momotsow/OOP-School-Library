@@ -139,39 +139,26 @@ Example command:
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
-
-```sh
+sh
   cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
+  git clone [git@github.com:myaccount/my-project.git](https://github.com/momotsow/OOP-School-Library.git)
 
 ### Install
 
 Install this project with:
 
-<!--
-Example command:
-
-```sh
-  cd my-project
+sh
+  cd OOP-School-Library
   gem install
-```
---->
+
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
+sh
+  ruby main.rb
 
-```sh
-  rails server
-```
---->
 
 ### Run tests
 
