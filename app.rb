@@ -152,7 +152,7 @@ class App
   end
 
   def list_rentals
-    print 'ID of person; '
+    print 'ID of person: '
     id = gets.chomp.to_i
     rentals = @rentals.select { |rental| id == rental.person.id }
 
