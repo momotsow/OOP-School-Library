@@ -1,8 +1,8 @@
+require_relative 'create_person'
 require_relative 'book'
 require_relative 'student'
 require_relative 'teacher'
-require_relative 'create_person'
-require_relative 'list_book'
+require_relative 'list_books'
 require_relative 'list_people'
 
 class App
