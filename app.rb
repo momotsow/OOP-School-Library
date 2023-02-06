@@ -1,6 +1,7 @@
 require_relative 'book'
 require_relative 'student'
 require_relative 'teacher'
+require_relative 'create_person'
 require_relative 'list_book'
 require_relative 'list_people'
 
@@ -52,20 +53,6 @@ class App
     answer = gets.chomp.to_i
     exit if answer == 7
     option_checker(answer)
-  end
-
-  def create_person
-    puts 'Create a student (1) or a teacher (2)? [Input the number]: '
-    answer = gets.chomp.to_i
-
-    case answer
-    when 1
-      create_student
-    when 2
-      create_teacher
-    end
-
-    run
   end
 
   def create_student
