@@ -55,26 +55,6 @@ class App
     option_checker(answer)
   end
 
-  def create_student
-    print 'Age: '
-    age = gets.chomp.to_i
-    print 'Name: '
-    name = gets.chomp
-
-    print 'Has parent permission? [Y/N]'
-    permission = gets.chomp.upcase
-    case permission
-    when 'Y'
-      permission = true
-    when 'N'
-      permission = false
-    end
-
-    student = Student.new(age, nil, name, parent_permission: permission)
-    @people.push(student)
-    puts 'A student is created successfully'
-  end
-
   def create_teacher
     print 'Age: '
     age = gets.chomp.to_i
