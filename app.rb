@@ -65,6 +65,8 @@ class App
 
   def load_data
     load_books
+    puts
+    load_rentals
   end
   
   def convert_date(str)
