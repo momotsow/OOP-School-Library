@@ -7,7 +7,8 @@ require_relative 'list_people'
 require_relative 'create_book'
 require_relative 'create_rental'
 require_relative 'list_rentals'
-
+require_relative './preserve/save_data'
+require_relative './preserve/load_data'
 class App
   attr_reader :people
 
@@ -51,10 +52,21 @@ class App
     end
   end
 
+  def save_data
+    save_book
+    save_person
+    save_rental
+  end
+
+  def load
+    load_data
+  end
+
   def run
     menu
     answer = gets.chomp.to_i
     exit if answer == 7
+    save_data
     option_checker(answer)
   end
 end
