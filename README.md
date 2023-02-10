@@ -21,9 +21,9 @@
   - [🙏 Acknowledgments ](#-acknowledgments-)
 
 
-# 📖 # OOP school library: refactor your code <a name="about-project"></a>
+# 📖 OOP school library: preserve data <a name="about-project"></a>
 
-**# OOP school library: refactor your code** In this project, you will use your newly acquired knowledge and refactor your previous code.
+**OOP school library: preserve data** In this project you will preserve the data from your app and load preserved data on startup.
 
 
 ## 🛠 Built With <a name="built-with"></a>
