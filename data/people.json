@@ -1,0 +1,5 @@
+[
+  { "type": "Student", "name": "hevar", "age": 22 },
+  { "type": "Teacher", "name": "khomotso", "age": 24 },
+  { "type": "Student", "name": "muzafar", "age": 22 }
+]

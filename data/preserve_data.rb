@@ -1,4 +1,5 @@
 require_relative '../book'
+require_relative '../person'
 require 'json'
 
 def load_books
@@ -88,6 +89,53 @@ def save_rental(date, book, person)
     file.close
 
     myfile = File.open('./data/rentals.json', 'w')
+    myfile.write(JSON.pretty_generate(rental))
+    myfile.close
+
+  else
+    puts 'no file'
+  end
+end
+
+def load_people
+  if File.exist?('./data/people.json')
+    file = File.open('./data/people.json')
+
+    if File.empty?('./data/people.json')
+      puts 'Please add people'
+    else
+      people = JSON.parse(File.read('./data/people.json'))
+      puts 'add people: '
+      people.each do |p|
+        puts "Book: #{p['name']} on: #{p['age']}"
+      end
+    end
+    file.close
+  else
+    puts 'No people found, please add some people first'
+  end
+end
+
+def save_person
+  obj = {
+    date: date,
+    person: person.name,
+    book: book.title
+  }
+
+  if File.exist?('./data/people.json')
+    file = File.open('./data/people.json')
+
+    if file.empty?
+      rental = [obj]
+    else
+      rental = JSON.parse(File.read('./data/people.json'))
+      rental << obj
+    end
+
+    file.close
+
+    myfile = File.open('./data/people.json', 'w')
     myfile.write(JSON.pretty_generate(rental))
     myfile.close
 
