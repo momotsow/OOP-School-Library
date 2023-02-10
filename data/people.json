@@ -1,0 +1,43 @@
+[
+  {
+    "type": "Student",
+    "name": "hevar",
+    "age": 22
+  },
+  {
+    "type": "Teacher",
+    "name": "khomotso",
+    "age": 24
+  },
+  {
+    "type": "Student",
+    "name": "muzafar",
+    "age": 22
+  },
+  {
+    "type": "Student",
+    "name": "lp",
+    "age": 12,
+    "parent_permission": true
+  },
+  {
+    "type": "Teacher",
+    "specialization": "math",
+    "name": "tr",
+    "age": 26,
+    "parent_permission": true
+  },
+  {
+    "type": "Student",
+    "name": "pol",
+    "age": 12,
+    "parent_permission": false
+  },
+  {
+    "type": "Teacher",
+    "specialization": "art",
+    "name": "painty",
+    "age": 84,
+    "parent_permission": true
+  }
+]
