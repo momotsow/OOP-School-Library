@@ -107,7 +107,7 @@ def load_people
       people = JSON.parse(File.read('./data/people.json'))
       puts 'add people: '
       people.each do |p|
-        puts "Book: #{p['name']} on: #{p['age']}"
+        puts "[#{p['type']}] Name: #{p['name']}, Age: #{p['age']}"
       end
     end
     file.close
