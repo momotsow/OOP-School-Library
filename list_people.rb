@@ -1,4 +1,10 @@
 require_relative 'person'
+require_relative 'create_person'
+require_relative 'create_teacher'
+require_relative 'create_student'
+require_relative 'student'
+require_relative 'teacher'
+require './data/preserve_data'
 
 def list_people
   puts ''
@@ -6,6 +12,7 @@ def list_people
   if @people.empty?
     puts 'No people added yet.'
     puts 'Please add people.'
+    return
   end
   @people.each do |person|
     puts "[#{person.class.name}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
